@@ -1,19 +1,21 @@
 # bilibili-live-stream
 ## 一个简单地获取bilibili直播流的小工具
-
-# 如何使用
+### 1. 如何使用
 1. 前往 [releases](https://github.com/ikexing-cn/bilibili-live-stream/releases) 查看并下载最新版本
-2. 双击运行此软件
-3. 按照流程进行操作
-4. 将导出的文件复制
-5. 打开PotPlayer(以windows为例)：
-6. 右键播放器主界面 -> 打开 -> 打开链接 -> 输入刚才复制的全部链接 （ 快捷键： **Ctrl+U** ）
-7. 在右侧播放列表中选择直播流
-8. 到此为止，你应该就可以正常的在PotPlayer看直播了
-9. 如果你有其他问题，请在[Issues](https://github.com/ikexing-cn/bilibili-live-stream/issues)里反馈
+2. 双击运行mian.exe
+3. 按1 2 3 顺序使用即可
+<img src="img/3.png">
 
-<img src="img/1.png">
+
 <img src="img/2.png">
 
-> 写在最后：最近major除了B站外都没版权，而b站的纯净流又会自动更新很难和6657对上时间，PotPlayer播放可以暂停就舒服了太多，
-> 但一些获取直播流的教程对新手来说又不是很友好，所以我写了一个小工具，让大家可以轻松获取b站的直播流。
+> 写在最后：自己写发现挺多bug的，获取直播间状态这个有bug，还没改，而且很多流也有问题。后来才发现了另外的一个获取直播流的脚本库，那个写的挺详细而且挺狠，但是写都写了懒得改了，就这样吧
+>
+> pyqt写的，不会qml所以非常朴素，以后有机会再用electron、[go-wingui](https://github.com/snail007/go-wingui/releases/tag/v2.0)什么的写写
+>
+> golang用得也不怎么好，就猛堆屎山，以后再整高质量代码吧
+>
+> 简简单单用cmd调脚本跨语言而已，没用go-python、高性能RPC、protobuf 之类的仙术，所以还是得把go编译出来的exe文件放到py编译出来的exe文件下，就很屎山
+
+
+
