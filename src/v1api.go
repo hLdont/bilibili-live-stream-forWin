@@ -1,24 +1,18 @@
 package main
 
 import (
-	"fmt"
 	"github.com/tidwall/gjson"
-	"strconv"
 )
 
 const V1API string = "https://api.live.bilibili.com/xlive/web-room/v1/playUrl/playUrl"
 
-func V1Initialization() {
-	realRoomID := GetRealRoomID()
-	if realRoomID == -1 {
-		V1FormatInit()
-	}
-	param := map[string]string{"cid": strconv.FormatInt(realRoomID, 10), "platform": "h5"}
-	V1HandlerQualityUrl(GetChooseQuality(param, "data.quality_description", V1API), param)
+func GetV1Quality(realRoomID string) JParam {
+	param := JParam{"cid": realRoomID, "platform": "h5"}
+	return GetChooseQuality(param, "data.quality_description", V1API)
 }
 
-func V1HandlerQualityUrl(qn int64, param map[string]string) {
-	param["qn"] = strconv.FormatInt(qn, 10)
+func V1HandlerQualityUrl(qn int64, realRoomID string) JParam {
+	param := JParam{"cid": realRoomID, "platform": "h5", "qn": qn}
 	result := GetRequest(V1API, param)
 
 	var urls []string
@@ -31,19 +25,7 @@ func V1HandlerQualityUrl(qn int64, param map[string]string) {
 		return true
 	})
 
-	fmt.Println("视频地址如下(包含全部线路)：")
-
-	var content string
-
-	for url := range urls {
-		fmt.Println(urls[url])
-		content += urls[url] + "\n"
+	return JParam{
+		"urls": urls,
 	}
-
-	isOutput(content)
-}
-
-func V1FormatInit() {
-	fmt.Println()
-	V1Initialization()
 }
