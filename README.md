@@ -9,7 +9,7 @@
 
 <img src="img/2.png">
 
-> 写在最后：自己写发现挺多bug的，获取直播间状态这个有bug，还没改，而且很多流也有问题。后来才发现了另外的一个获取直播流的脚本库，那个写的挺详细而且挺狠，但是写都写了懒得改了，就这样吧
+> 写在最后：自己写发现挺多bug的，获取直播间状态这个有bug，还没改，而且很多流也有问题。后来才发现了另外的一个[获取直播流的py库](https://github.com/wbt5/real-url)，那个写的超详细而且超级狠，但是写都写了懒得改了，就这样吧
 >
 > pyqt写的，不会qml所以非常朴素，以后有机会再用electron、[go-wingui](https://github.com/snail007/go-wingui/releases/tag/v2.0)什么的写写
 >
