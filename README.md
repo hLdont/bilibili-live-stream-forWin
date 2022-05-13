@@ -1,7 +1,7 @@
 # bilibili-live-stream
 ## 一个简单地获取bilibili直播流的小工具
 ### 1. 如何使用
-1. 前往 [releases](https://github.com/ikexing-cn/bilibili-live-stream/releases) 查看并下载最新版本
+1. 前往 [releases](https://github.com/hLdont/bilibili-live-stream-forWin/releases) 查看并下载最新版本
 2. 双击运行mian.exe
 3. 按1 2 3 顺序使用即可
 <img src="img/3.png">
